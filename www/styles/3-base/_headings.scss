@@ -1,0 +1,60 @@
+/* ---------------------------------------------- *\
+    Headings
+\* ---------------------------------------------- */
+
+
+.heading {
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+
+/**
+ *  Sizes
+ */
+
+.heading--title {
+
+}
+
+.heading--large {
+
+}
+
+.heading--medium {
+
+}
+
+.heading--small {
+
+}
+
+
+/**
+ *  Colors
+ */
+
+.heading--dark {
+    color: $dark;
+}
+
+.heading--mid {
+    color: $mid;
+}
+
+.heading--light {
+    color: $light;
+}
+
+.heading--white {
+    color: #FFF;
+}
+
+
+/**
+ *  Spacing
+ */
+.heading--margin {
+    margin-bottom: 24px;
+}

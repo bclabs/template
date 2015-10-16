@@ -1,0 +1,40 @@
+/* ---------------------------------------------- *\
+    Body
+\* ---------------------------------------------- */
+
+
+.body {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+
+/**
+ *  Colors
+ */
+
+.body--dark {
+    color: $dark;
+}
+
+.body--mid {
+    color: $mid;
+}
+
+.body--light {
+    color: $light;
+}
+
+.body--white {
+    color: #FFF;
+}
+
+.body--margin {
+    margin-bottom: 16px;
+
+    @include bp-min($tablet-port) {
+        margin-bottom: 24px;
+    }
+}

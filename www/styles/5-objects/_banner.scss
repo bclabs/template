@@ -1,0 +1,16 @@
+/* ---------------------------------------------- *\
+    Banner
+\* ---------------------------------------------- */
+
+.banner {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+    .banner__inner {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }

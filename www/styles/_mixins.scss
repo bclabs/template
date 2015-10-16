@@ -1,0 +1,59 @@
+/*-----------------------------------*\
+ *   tools/mixins                    *
+\*-----------------------------------*/
+
+
+/**
+ * Adds vendor specific prefixes for certain CSS3 properties
+ */
+@mixin vendor($property, $value){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+
+/**
+ * Takes two colors and a direction to create a gradient background
+ * @include gradient-bg(#FFFFFF, #000000, vertical);
+ */
+@mixin gradient-bg($color1, $color2, $direction) {
+    @if ($direction == vertical) {
+        $end_position: bottom;
+        $linear_end_position: left bottom;
+    }
+    @else if ($direction == horizontal) {
+        $end_position: right;
+        $linear_end_position: right top;
+    }
+
+    background-image: -webkit-gradient(linear, left top, $linear_end_position, color-stop(0, $color1), color-stop(1, $color2));
+    background-image: -o-linear-gradient($end_position, $color1 0%, $color2 100%);
+    background-image: -moz-linear-gradient($end_position, $color1 0%, $color2 100%);
+    background-image: -webkit-linear-gradient($end_position, $color1 0%, $color2 100%);
+    background-image: -ms-linear-gradient($end_position, $color1 0%, $color2 100%);
+    background-image: linear-gradient(to $end_position, $color1 0%, $color2 100%);
+}
+
+
+/**
+ * Min-width breakpoint
+ */
+@mixin bp-min($size) {
+    @media screen and (min-width: #{$size}) {
+        @content; 
+    }
+}
+
+
+/**
+ * Max-width breakpoint
+ * We use $size - 1 so default sizes can be used. ex. $size--lap instead of 1023
+ */
+@mixin bp-max($size) {
+    @media screen and (max-width: #{$size - 1}) {
+        @content;
+    }
+}

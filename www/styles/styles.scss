@@ -1,0 +1,27 @@
+/* ---------------------------------------------- *\
+    Big Teams Styles
+\* ---------------------------------------------- */
+
+@import "mixins";
+
+@import "1-settings/colors",
+        "1-settings/fonts",
+        "1-settings/sizes";
+
+@import "2-generic/reset",
+        "2-generic/normalize",
+        "2-generic/structure";
+
+@import "3-base/body",
+        "3-base/headings";
+
+@import "4-components/buttons",
+        "4-components/forms",
+        "4-components/grid",
+        "4-components/section";
+
+@import "5-objects/banner",
+        "5-objects/footer",
+        "5-objects/header";
+
+@import "6-pages/home";

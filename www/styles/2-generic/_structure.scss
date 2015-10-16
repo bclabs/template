@@ -1,0 +1,45 @@
+/* ---------------------------------------------- *\
+    Structure
+\* ---------------------------------------------- */
+
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background-color: #FFF;
+    font-family: sans-serif;
+}
+
+.cf:after {
+    display: block;
+    content: '';
+    clear: both;
+    height: 0px;
+}
+
+.wrapper {
+    display: block;
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include bp-min($tablet-port) {
+        padding: 0 45px;
+    }
+
+    @include bp-min($tablet-land) {
+        padding: 0 60px;
+    }
+
+    @include bp-min($desktop) {
+        padding: 0;
+        max-width: 960px;
+    }
+}
+
+.wrapper--small {
+    @include bp-min($tablet-land) {
+        max-width: 640px;
+        padding: 0;
+    }
+}
